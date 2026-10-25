@@ -1,27 +1,33 @@
-import type { NetworkModel } from '../models/network';
+import { z } from 'zod';
 import type { RouteResult } from '../models/RouteResult';
-import { buildGraph } from '../graph/buildGraph';
-import { dijkstra } from '../algorithms/dijkstra';
-import { reconstructRoute } from '../algorithms/reconstructRoute';
+import { requestJson } from './api';
 
 export type RouteOutcome = { status: 'success'; route: RouteResult } | { status: 'error' | 'no-route'; message: string };
 
-export function createRouteService(model: NetworkModel) {
-  const graph = buildGraph(model);
-  return {
-    find(sourceId: string | null, destinationId: string | null): RouteOutcome {
-      if (!sourceId || !destinationId) return { status: 'error', message: 'Select both a source and a destination.' };
-      if (!model.stations.has(sourceId) || !model.stations.has(destinationId)) return { status: 'error', message: 'Unknown station. Choose a station from the results.' };
-      if (sourceId === destinationId) return { status: 'error', message: 'Source and destination must be different.' };
-      if ([sourceId, destinationId].some(id => model.stations.get(id)?.status === 'access-unconfirmed')) {
-        return { status: 'error', message: 'Passenger access at this station is not yet verified in this dataset. Choose a nearby station.' };
-      }
-      try {
-        const path = dijkstra(graph, sourceId, destinationId);
-        return path ? { status: 'success', route: reconstructRoute(graph, sourceId, destinationId, path) } : { status: 'no-route', message: 'No available route between the selected stations.' };
-      } catch {
-        return { status: 'error', message: 'This route could not be calculated. Check the network data.' };
-      }
-    },
-  };
+const routeSchema = z.object({
+  sourceId: z.string(), destinationId: z.string(), stationIds: z.array(z.string()), connectionIds: z.array(z.string()),
+  segments: z.array(z.object({ lineId: z.string(), stationIds: z.array(z.string()), connectionIds: z.array(z.string()), minutes: z.number().finite().nonnegative() })),
+  interchanges: z.array(z.object({ stationId: z.string(), toStationId: z.string().optional(), fromLineId: z.string(), toLineId: z.string(), minutes: z.number().finite().positive(), transferId: z.string() })),
+  totalTravelTime: z.number().finite().nonnegative(), rideMinutes: z.number().finite().nonnegative(),
+  transferMinutes: z.number().finite().nonnegative(), interchangeCount: z.number().int().nonnegative(),
+});
+const outcomeSchema = z.discriminatedUnion('status', [
+  z.object({ status: z.literal('success'), route: routeSchema }),
+  z.object({ status: z.literal('error'), message: z.string() }),
+  z.object({ status: z.literal('no-route'), message: z.string() }),
+]);
+
+export async function findRoute(sourceId: string | null, destinationId: string | null, networkVersion: string): Promise<RouteOutcome> {
+  if (!sourceId || !destinationId) return { status: 'error', message: 'Select both a source and a destination.' };
+  try {
+    const { response, data } = await requestJson('/api/routes', {
+      method: 'POST', headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ sourceId, destinationId, networkVersion }),
+    });
+    const outcome = outcomeSchema.parse(data);
+    if (!response.ok && outcome.status === 'success') throw new Error('Unexpected route response');
+    return outcome;
+  } catch {
+    return { status: 'error', message: 'The route service is unavailable. Please try again.' };
+  }
 }

@@ -6,9 +6,12 @@ import { validateNetwork } from '../data/validateNetwork';
 import data from './fixtures/sample-network.json';
 import { createRouteService } from './referenceRouteService';
 import App from '../App';
+const referenceOutcome = createRouteService(validateNetwork(data)).find('new-delhi', 'rk-ashram');
+if (referenceOutcome.status !== 'success') throw new Error('Expected fixture route');
 beforeEach(() => {
   vi.stubGlobal('fetch', vi.fn(async (url: string) => {
-    if (url === `${import.meta.env.BASE_URL}metro-network.json`) return new Response(JSON.stringify(data));
+    if (url === '/api/network') return new Response(JSON.stringify(data));
+    if (url === '/api/routes') return new Response(JSON.stringify(referenceOutcome));
     throw new Error(`Unexpected request: ${url}`);
   }));
 });

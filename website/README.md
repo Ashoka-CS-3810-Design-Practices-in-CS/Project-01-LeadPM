@@ -1,8 +1,9 @@
 # LeadsPM Delhi Metro website
 
-This is a self-contained React website for GitHub Pages. Its validated metro
-network is served as `public/metro-network.json`, and route calculations run in
-the browser; no Flask server or API is needed.
+This is the React and TypeScript frontend for the Flask-backed Delhi Metro route
+planner. In the deployed app it loads the validated network from Flask's
+`GET /api/network` endpoint and submits route requests to `POST /api/routes`.
+The browser validates both responses with Zod; Python owns route calculation.
 
 ## Run and test
 
@@ -13,9 +14,12 @@ npm run build
 npm run preview
 ```
 
-## GitHub Pages
+## Development
 
-Push the `github-pages` branch to build and deploy the site with GitHub Actions.
-The workflow publishes only `website/dist`. For the Project Pages URL, configure
-GitHub Pages to deploy from this workflow:
-`https://ashoka-cs-3810-design-practices-in-cs.github.io/Project-01-LeadPM/`.
+Start Flask on port 5000, then run `npm run dev`. Vite on port 5173 proxies
+`/api` requests to Flask. The production build is served by Flask locally and
+copied into the repository root `public/` directory by Vercel's `build.py`.
+
+The existing GitHub Pages branch remains available as its own static deployment;
+this Vercel project uses the Flask-backed application source at the repository
+root.

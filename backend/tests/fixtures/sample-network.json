@@ -1,0 +1,540 @@
+{
+  "version": "sample-0.1.0",
+  "kind": "sample",
+  "description": "Development sample only. Selected central Delhi station names; schematic coordinates and all travel/transfer times are illustrative, not official service information. Not the complete Delhi Metro network.",
+  "stations": [
+    {
+      "id": "pul-bangash",
+      "name": "Pul Bangash",
+      "code": "PBG",
+      "lineIds": [
+        "red"
+      ],
+      "x": 150,
+      "y": 100,
+      "labelDx": -25,
+      "labelDy": -22
+    },
+    {
+      "id": "tis-hazari",
+      "name": "Tis Hazari",
+      "code": "THZ",
+      "lineIds": [
+        "red"
+      ],
+      "x": 280,
+      "y": 100,
+      "labelDx": -25,
+      "labelDy": -22
+    },
+    {
+      "id": "kashmere-gate",
+      "name": "Kashmere Gate",
+      "code": "KGT",
+      "lineIds": [
+        "red",
+        "yellow",
+        "violet"
+      ],
+      "x": 420,
+      "y": 100,
+      "labelDx": -125,
+      "labelDy": 25
+    },
+    {
+      "id": "shastri-park",
+      "name": "Shastri Park",
+      "code": "SHP",
+      "lineIds": [
+        "red"
+      ],
+      "x": 780,
+      "y": 100,
+      "labelDx": -28,
+      "labelDy": -22
+    },
+    {
+      "id": "civil-lines",
+      "name": "Civil Lines",
+      "code": "CVL",
+      "lineIds": [
+        "yellow"
+      ],
+      "x": 420,
+      "y": 35,
+      "labelDx": 20,
+      "labelDy": 5
+    },
+    {
+      "id": "chandni-chowk",
+      "name": "Chandni Chowk",
+      "code": "CHK",
+      "lineIds": [
+        "yellow"
+      ],
+      "x": 420,
+      "y": 175,
+      "labelDx": -130,
+      "labelDy": 5
+    },
+    {
+      "id": "chawri-bazar",
+      "name": "Chawri Bazar",
+      "code": "CWB",
+      "lineIds": [
+        "yellow"
+      ],
+      "x": 420,
+      "y": 245,
+      "labelDx": -118,
+      "labelDy": 5
+    },
+    {
+      "id": "new-delhi",
+      "name": "New Delhi",
+      "code": "NDL",
+      "lineIds": [
+        "yellow"
+      ],
+      "x": 420,
+      "y": 320,
+      "labelDx": -96,
+      "labelDy": 5
+    },
+    {
+      "id": "rajiv-chowk",
+      "name": "Rajiv Chowk",
+      "code": "RJC",
+      "lineIds": [
+        "yellow",
+        "blue"
+      ],
+      "x": 420,
+      "y": 420,
+      "labelDx": -105,
+      "labelDy": 30
+    },
+    {
+      "id": "patel-chowk",
+      "name": "Patel Chowk",
+      "code": "PTC",
+      "lineIds": [
+        "yellow"
+      ],
+      "x": 420,
+      "y": 495,
+      "labelDx": -118,
+      "labelDy": 5
+    },
+    {
+      "id": "central-secretariat",
+      "name": "Central Secretariat",
+      "code": "CST",
+      "lineIds": [
+        "yellow",
+        "violet"
+      ],
+      "x": 420,
+      "y": 590,
+      "labelDx": -168,
+      "labelDy": 5
+    },
+    {
+      "id": "udyog-bhawan",
+      "name": "Udyog Bhawan",
+      "code": "UDB",
+      "lineIds": [
+        "yellow"
+      ],
+      "x": 420,
+      "y": 680,
+      "labelDx": -130,
+      "labelDy": 5
+    },
+    {
+      "id": "rk-ashram",
+      "name": "R. K. Ashram Marg",
+      "code": "RKA",
+      "lineIds": [
+        "blue"
+      ],
+      "x": 145,
+      "y": 420,
+      "labelDx": -40,
+      "labelDy": -25
+    },
+    {
+      "id": "barakhamba",
+      "name": "Barakhamba Road",
+      "code": "BKR",
+      "lineIds": [
+        "blue"
+      ],
+      "x": 575,
+      "y": 420,
+      "labelDx": -65,
+      "labelDy": -25
+    },
+    {
+      "id": "mandi-house",
+      "name": "Mandi House",
+      "code": "MDH",
+      "lineIds": [
+        "blue",
+        "violet"
+      ],
+      "x": 740,
+      "y": 420,
+      "labelDx": 20,
+      "labelDy": 27
+    },
+    {
+      "id": "pragati-maidan",
+      "name": "Pragati Maidan",
+      "code": "PGM",
+      "lineIds": [
+        "blue"
+      ],
+      "x": 915,
+      "y": 420,
+      "labelDx": -55,
+      "labelDy": -25
+    },
+    {
+      "id": "lal-quila",
+      "name": "Lal Quila",
+      "code": "LQL",
+      "lineIds": [
+        "violet"
+      ],
+      "x": 610,
+      "y": 175,
+      "labelDx": 20,
+      "labelDy": 5
+    },
+    {
+      "id": "jama-masjid",
+      "name": "Jama Masjid",
+      "code": "JMM",
+      "lineIds": [
+        "violet"
+      ],
+      "x": 740,
+      "y": 245,
+      "labelDx": 20,
+      "labelDy": 5
+    },
+    {
+      "id": "delhi-gate",
+      "name": "Delhi Gate",
+      "code": "DLG",
+      "lineIds": [
+        "violet"
+      ],
+      "x": 740,
+      "y": 300,
+      "labelDx": 20,
+      "labelDy": 5
+    },
+    {
+      "id": "ito",
+      "name": "ITO",
+      "code": "ITO",
+      "lineIds": [
+        "violet"
+      ],
+      "x": 740,
+      "y": 355,
+      "labelDx": 20,
+      "labelDy": 5
+    },
+    {
+      "id": "janpath",
+      "name": "Janpath",
+      "code": "JNP",
+      "lineIds": [
+        "violet"
+      ],
+      "x": 620,
+      "y": 505,
+      "labelDx": 20,
+      "labelDy": 5
+    },
+    {
+      "id": "khan-market",
+      "name": "Khan Market",
+      "code": "KNM",
+      "lineIds": [
+        "violet"
+      ],
+      "x": 620,
+      "y": 680,
+      "labelDx": 20,
+      "labelDy": 5
+    }
+  ],
+  "lines": [
+    {
+      "id": "red",
+      "name": "Red Line",
+      "color": "#dc5261",
+      "stationIds": [
+        "pul-bangash",
+        "tis-hazari",
+        "kashmere-gate",
+        "shastri-park"
+      ]
+    },
+    {
+      "id": "yellow",
+      "name": "Yellow Line",
+      "color": "#d6a51b",
+      "stationIds": [
+        "civil-lines",
+        "kashmere-gate",
+        "chandni-chowk",
+        "chawri-bazar",
+        "new-delhi",
+        "rajiv-chowk",
+        "patel-chowk",
+        "central-secretariat",
+        "udyog-bhawan"
+      ]
+    },
+    {
+      "id": "blue",
+      "name": "Blue Line",
+      "color": "#3885c6",
+      "stationIds": [
+        "rk-ashram",
+        "rajiv-chowk",
+        "barakhamba",
+        "mandi-house",
+        "pragati-maidan"
+      ]
+    },
+    {
+      "id": "violet",
+      "name": "Violet Line",
+      "color": "#9763b5",
+      "stationIds": [
+        "kashmere-gate",
+        "lal-quila",
+        "jama-masjid",
+        "delhi-gate",
+        "ito",
+        "mandi-house",
+        "janpath",
+        "central-secretariat",
+        "khan-market"
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "id": "red-pul-bangash-tis-hazari",
+      "to": "tis-hazari",
+      "lineId": "red",
+      "minutes": 3,
+      "from": "pul-bangash"
+    },
+    {
+      "id": "red-tis-hazari-kashmere-gate",
+      "to": "kashmere-gate",
+      "lineId": "red",
+      "minutes": 3,
+      "from": "tis-hazari"
+    },
+    {
+      "id": "red-kashmere-gate-shastri-park",
+      "to": "shastri-park",
+      "lineId": "red",
+      "minutes": 3,
+      "from": "kashmere-gate"
+    },
+    {
+      "id": "yellow-civil-lines-kashmere-gate",
+      "to": "kashmere-gate",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "civil-lines"
+    },
+    {
+      "id": "yellow-kashmere-gate-chandni-chowk",
+      "to": "chandni-chowk",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "kashmere-gate"
+    },
+    {
+      "id": "yellow-chandni-chowk-chawri-bazar",
+      "to": "chawri-bazar",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "chandni-chowk"
+    },
+    {
+      "id": "yellow-chawri-bazar-new-delhi",
+      "to": "new-delhi",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "chawri-bazar"
+    },
+    {
+      "id": "yellow-new-delhi-rajiv-chowk",
+      "to": "rajiv-chowk",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "new-delhi"
+    },
+    {
+      "id": "yellow-rajiv-chowk-patel-chowk",
+      "to": "patel-chowk",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "rajiv-chowk"
+    },
+    {
+      "id": "yellow-patel-chowk-central-secretariat",
+      "to": "central-secretariat",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "patel-chowk"
+    },
+    {
+      "id": "yellow-central-secretariat-udyog-bhawan",
+      "to": "udyog-bhawan",
+      "lineId": "yellow",
+      "minutes": 2,
+      "from": "central-secretariat"
+    },
+    {
+      "id": "blue-rk-ashram-rajiv-chowk",
+      "to": "rajiv-chowk",
+      "lineId": "blue",
+      "minutes": 2,
+      "from": "rk-ashram"
+    },
+    {
+      "id": "blue-rajiv-chowk-barakhamba",
+      "to": "barakhamba",
+      "lineId": "blue",
+      "minutes": 2,
+      "from": "rajiv-chowk"
+    },
+    {
+      "id": "blue-barakhamba-mandi-house",
+      "to": "mandi-house",
+      "lineId": "blue",
+      "minutes": 2,
+      "from": "barakhamba"
+    },
+    {
+      "id": "blue-mandi-house-pragati-maidan",
+      "to": "pragati-maidan",
+      "lineId": "blue",
+      "minutes": 2,
+      "from": "mandi-house"
+    },
+    {
+      "id": "violet-kashmere-gate-lal-quila",
+      "to": "lal-quila",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "kashmere-gate"
+    },
+    {
+      "id": "violet-lal-quila-jama-masjid",
+      "to": "jama-masjid",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "lal-quila"
+    },
+    {
+      "id": "violet-jama-masjid-delhi-gate",
+      "to": "delhi-gate",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "jama-masjid"
+    },
+    {
+      "id": "violet-delhi-gate-ito",
+      "to": "ito",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "delhi-gate"
+    },
+    {
+      "id": "violet-ito-mandi-house",
+      "to": "mandi-house",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "ito"
+    },
+    {
+      "id": "violet-mandi-house-janpath",
+      "to": "janpath",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "mandi-house"
+    },
+    {
+      "id": "violet-janpath-central-secretariat",
+      "to": "central-secretariat",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "janpath"
+    },
+    {
+      "id": "violet-central-secretariat-khan-market",
+      "to": "khan-market",
+      "lineId": "violet",
+      "minutes": 2,
+      "from": "central-secretariat"
+    }
+  ],
+  "transfers": [
+    {
+      "id": "transfer-kashmere-gate-red-yellow",
+      "stationId": "kashmere-gate",
+      "fromLineId": "red",
+      "toLineId": "yellow",
+      "minutes": 4
+    },
+    {
+      "id": "transfer-kashmere-gate-red-violet",
+      "stationId": "kashmere-gate",
+      "fromLineId": "red",
+      "toLineId": "violet",
+      "minutes": 4
+    },
+    {
+      "id": "transfer-kashmere-gate-yellow-violet",
+      "stationId": "kashmere-gate",
+      "fromLineId": "yellow",
+      "toLineId": "violet",
+      "minutes": 4
+    },
+    {
+      "id": "transfer-rajiv-chowk-yellow-blue",
+      "stationId": "rajiv-chowk",
+      "fromLineId": "yellow",
+      "toLineId": "blue",
+      "minutes": 4
+    },
+    {
+      "id": "transfer-central-secretariat-yellow-violet",
+      "stationId": "central-secretariat",
+      "fromLineId": "yellow",
+      "toLineId": "violet",
+      "minutes": 4
+    },
+    {
+      "id": "transfer-mandi-house-blue-violet",
+      "stationId": "mandi-house",
+      "fromLineId": "blue",
+      "toLineId": "violet",
+      "minutes": 4
+    }
+  ]
+}
