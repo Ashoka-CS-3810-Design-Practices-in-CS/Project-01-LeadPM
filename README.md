@@ -59,4 +59,4 @@ Backend tests compare all selectable station pairs to an independent Floyd–War
 
 Vercel builds the React client with `build.py`, copies the result to root `public/`, and runs the Flask app exposed by root `app.py` as a Python Function. The Vercel configuration is in `pyproject.toml` and `vercel.json`.
 
-The GitHub Pages `github-pages` branch remains unchanged. The Flask-backed source is maintained separately for Vercel.
+The existing GitHub Pages deployment at <https://dpcs.ribence.com.np/> remains separate and unchanged. This Flask-backed project is deployed on Vercel.

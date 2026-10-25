@@ -20,6 +20,6 @@ Start Flask on port 5000, then run `npm run dev`. Vite on port 5173 proxies
 `/api` requests to Flask. The production build is served by Flask locally and
 copied into the repository root `public/` directory by Vercel's `build.py`.
 
-The existing GitHub Pages branch remains available as its own static deployment;
-this Vercel project uses the Flask-backed application source at the repository
-root.
+The existing GitHub Pages deployment at <https://dpcs.ribence.com.np/> remains
+separate and unchanged. This Vercel project uses the Flask-backed source at the
+repository root.
